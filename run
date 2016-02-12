@@ -3,12 +3,12 @@
 # Start magento
 # Run this when ever you are ready to use the box
 ##
-echo "Removing existing news application"
+echo "Removing existing service application"
 docker rm -f service >/dev/null
 
 echo "Starting service application"
 
-echo "Executing : docker run -d -p 1001:80 -v \$(pwd)/www:/var/www --name news zend web"
+echo "Executing : docker run -d -p 1001:80 -v \$(pwd)/www:/var/www --name service user web"
 docker run -d -p 1001:80 -v $(pwd)/www:/var/www --name service user web >/dev/null
 
 echo "Load http://192.168.99.100:1001"
