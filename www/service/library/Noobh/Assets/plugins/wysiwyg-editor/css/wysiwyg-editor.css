@@ -1,0 +1,10 @@
+.NoobhEditor{
+	/*word-break: break-all;*/
+    word-wrap: break-word !important;
+    white-space: normal;
+}
+.NoobhDisplay{
+	/*word-break: break-all;*/
+    word-wrap: break-word !important;
+    white-space: normal;
+}

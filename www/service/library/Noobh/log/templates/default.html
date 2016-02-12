@@ -1,0 +1,199 @@
+<html>
+<head>
+
+<title>{errorStatus} - {applicationName}</title>
+
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+
+body {
+background-color: #EEEEEE;
+font-family: "Myriad Set", "Lucida Grande", "Verdana", sans-serif;
+font-size: 16px; /* Set the starting px for text so the ems have something to relate to */
+color: #000;
+padding: 10px; /* Necessary for iPhone and iPad rendering */
+}
+
+h1 {
+font-size: 25px;
+}
+
+h1#branding {
+width: 432px; /* 400px + L & R padding of the .message element */
+margin: 0 auto;
+text-shadow: 0 1px 0 #fff;
+color: #535353;
+font-size: 1.35em;
+}
+
+.message {
+background: #fff;
+border: 1px solid #D9D9D9;
+-moz-border-radius: 5px; -webkit-border-radius: 5px;
+width: 400px;
+margin: 16px auto;
+padding: 14px 16px;
+text-shadow: 0 1px 0 #fff;
+-webkit-transition: all 200ms linear;
+-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px 0px inset, white 0px 1px 0px 0px;
+}
+
+.message.first {
+background: #545454;
+border: 1px solid #494949; =20
+color: white;
+text-shadow: 0 -1px 0px #000;
+}
+
+.message p {
+font-size: 15px;
+margin-top: 1em;
+line-height: 1.5em;
+}
+
+.message p.buttonContainer {
+text-align: right;
+margin: 0.5em;
+margin-top: 1em;
+}
+
+.message a.button {
+text-decoration: none;
+color: #fff;
+background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #0069A6), color-stop(0.9, #009AF2));
+background: -moz-linear-gradient(center bottom, #0069A6 50%, #009AF2 50% );
+-moz-border-radius: 3px; -webkit-border-radius: 3px;
+padding: 0.35em 0.5em;
+border: 1px solid #004D79;
+border-top: 1px solid #004166;
+border-bottom: 1px solid #006EAC;
+text-shadow: 0 -1px 0 #005586;
+}
+
+.message a.button:active {
+background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #009AF2), color-stop(0.9, #0069A6));
+background: -moz-linear-gradient(center bottom, #009AF2 50%, #0069A6 50% );=20
+}
+
+.message strong {
+color: #545454;
+}
+
+.message table {
+border: 1px solid #ccc;
+border-collapse: collapse;
+margin: 1em 0;
+width: 100%;
+}
+
+.message table td {
+padding: 14px;
+border-bottom: 1px solid #ccc;
+}
+
+.message table td:nth-child(1) {
+background: #EEEEEE;
+border-right: 1px solid #ccc;
+}
+
+.message blockquote {
+width: 90%;
+margin: 1em 10px;
+line-height: 1.75em;
+font-style: italic;
+color: #E1E1E1;
+}
+
+.message table td.iCal img {
+width: 25px;
+height: 25px;
+float: left;
+margin-right: 0.5em;
+}
+
+.message table td.iCal {
+line-height: 25px;
+}
+
+.break-word {
+	word-wrap: break-word;
+	width: 200px !important;
+	display: block;
+} 
+th {
+	padding:20px 0;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #717171), color-stop(0.9, #919191));
+	background: -moz-linear-gradient(center bottom, #717171 10%, #919191 90% );
+	font-size:18px !important;
+	color:#fff;
+	text-shadow: 0 1px 0 #000;
+
+}
+</style>
+
+
+</head>
+<body>
+
+<h1 id="branding">IS&amp;T</h1>
+
+<div class="message">
+<p>Alert in {errorStatus} level has been detected in the {applicationName} application:</p>
+	<table>
+		<tbody>
+		<tr>
+			<th colspan="2">Application Information</th>
+
+		<tr>
+			<td>Name</td><td>{applicationName}</td>
+		</tr>
+		
+		<tr>
+			<td>Request Url</td><td><span class="break-word">{requestUrl}</span></td>
+		</tr>
+		<tr>
+			<td>Environment</td><td>{environment}</td>
+		</tr>
+		<tr>
+			<th colspan="2">User Information</th>
+		</tr>
+		<tr>
+			<td>DSID</td><td>{dsid}</td>
+		</tr>
+		<tr>
+			<td>Username</td><td>{username}</td>
+		</tr>
+		<tr>
+			<td>Email</td><td><a href="mailto:vbose@Collash.com">{email}</a></td>
+		</tr>
+		<tr>
+			<td>Name</td><td>{name}</td>
+		</tr>
+		<tr>
+			<th colspan="2">Error Details</th>
+		</tr>
+		<tr>
+			<td>Status</td><td>{errorStatus}</td>
+		</tr>
+		<tr>
+			<td>Log Message</td><td><span class="break-word">{logMessage}</span>
+</td>
+		</tr>
+		<tr>
+			<td>Reason</td><td>{reason}</td>
+		</tr>
+		<tr>
+			<td>Suggestion</td><td>{suggestion}</td>
+		</tr>
+		<tr>
+			<td>Raw Request Header</td><td><span class="break-word">{header}</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+</div></body></html>

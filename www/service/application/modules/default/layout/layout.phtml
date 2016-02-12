@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <?php print $this->header(); ?>
+  <body>
+  <?php 
+    print $this->getContent();   	
+  ?>
+  <?php print $this->footer(); ?>
+  </body>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+  	<?php
+  		if($_SERVER['REQUEST_URI'] != "/"){?>
+  			<link href="/css/loggedin.css" rel="stylesheet">
+  	<?php 
+  		}else{
+  	?>
+
+  	<?php 
+  		}
+  	?>
+</html>

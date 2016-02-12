@@ -1,0 +1,48 @@
+body {
+	background: none;
+	padding-top: 80px;
+}
+footer{
+	
+}
+li {
+	list-style: none;
+}
+a:hover{
+	color: rgb(155, 155, 155);
+	text-decoration: none; 
+}
+.inside-band {
+	display: inherit;
+	margin: 0;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 3em;
+	font-weight: 700;
+	color: #fff;
+
+}
+.menu li{
+	display: inline;
+	/*font-size: 1.5em;*/
+}
+.menu a{
+	color: black;
+}
+.menu-select{ 
+	font-weight:none;
+}
+textarea {
+    resize: none;
+}
+
+.badge-warning a{
+	color: #F5F5F5;
+}
+
+.form-control{
+	display: inline;
+}
+.deletebtn :hover{
+	color: #ff4c4c;
+}

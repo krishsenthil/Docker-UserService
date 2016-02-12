@@ -1,0 +1,104 @@
+    <div class="brand">Collash</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Collash</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center" ng-controller="loginController">
+                    <h2 class="brand-before">
+                        <small>{{formTitle}}</small>
+                    </h2>
+                    <form method="POST" action="/" class="form" style="width:350px;margin:0 auto; padding-bottom:30px;">
+                    <input type="hidden" value={{postType}} name="post-type" />
+                            <div class="form-group">
+                                  <input type="text" name="email" class="form-control" name="email" ng-model="email" placeholder="{{emailHolder}}" />
+                            </div>
+                            <div class="form-group">
+                                  <input type="password" class="form-control" name="password" ng-model="password" placeholder="{{passwordHolder}}" />
+                            </div>
+                            <span style="color:red;float:left;padding-bottom:8px;">{{errorText}}</span>
+                            <span style="color:green;float:left;padding-bottom:8px;">{{messageText}}</span>
+                            <br>
+                        <div class="form-group">
+                          <input class="btn btn-primary btn-lg btn-block" type="submit" value="{{submitText}}"/>
+                          <span class="pull-right"><a href="javascript:void(0);" ng-click="flip();">{{linkText}}</a></span>
+                          <span>
+                          <a href="javascript:void(0);" style="float:left;">Need help?</a>
+                          </span>
+                        </div>
+                  </form>
+
+                    <h1 class="brand-name">It&#39;s Quick</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>
+                            Your personal search
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+<script>
+collashApp.controller('loginController', ['$scope','$http', function($scope,$http) {
+     // 'use strict';
+     //True show login page and false show registration page
+     <?php 
+        if(isset($this->view->showLogin)) {
+            if($this->view->showLogin){
+                $status = true;
+            }else{
+                $status = false;   
+            }
+        }else{
+            $status = true;
+        }
+     ?>
+     var status = '<?php echo $status; ?>';
+     $scope.errorText = '<?php echo isset($this->view->error) ? $this->view->error : ""; ?>';
+     $scope.email = '<?php echo isset($this->view->email) ? $this->view->email : ""; ?>';
+     $scope.password = '<?php echo isset($this->view->password) ? $this->view->password : ""; ?>';
+     $scope.messageText = '<?php echo isset($this->view->message) ? $this->view->message : ""; ?>';
+     function _setUpWithByStatus(status){
+         if(status == true){
+            $scope.formTitle = "Login";
+            $scope.postType = "login";
+            $scope.submitText = "Sign In";
+            $scope.emailHolder = "Email";
+            $scope.passwordHolder = "Password";
+            $scope.linkText = "Register";
+            $scope.email = "";
+            $scope.password = "";
+         }else{
+            $scope.formTitle = "Registration";
+            $scope.postType = "register";
+            $scope.submitText = "Register";
+            $scope.emailHolder = "Valid Email";
+            $scope.passwordHolder = "New Password";
+            $scope.linkText = "Login";
+            $scope.email = "";
+            $scope.password = "";
+         }
+     }
+     _setUpWithByStatus(status);
+     $scope.flip = function(){
+        if($scope.linkText == "Register"){
+            //show registration form
+            _setUpWithByStatus(false);
+        }else{
+            //show login form
+            _setUpWithByStatus(true);
+        }
+     };
+}]);
+</script>

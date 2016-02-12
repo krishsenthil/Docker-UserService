@@ -1,0 +1,23 @@
+#!/bin/bash
+##
+# Set up script to clone magento
+# Run this script only for the first time when you set up the application
+##
+docker rm -f service
+read -p "Are you building a new project? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	mkdir $(pwd)/www
+	pushd $(pwd)/www
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	git clone https://krishsenthil@bitbucket.org/underminers/undermines.git service
+	git fetch
+	git checkout user_service
+
+	
+
+
+	popd
+fi
+docker build -t user config/
