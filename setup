@@ -10,14 +10,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	mkdir $(pwd)/www
 	pushd $(pwd)/www
-	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	git clone https://krishsenthil@bitbucket.org/underminers/undermines.git service
-	git fetch
-	git checkout user_service
-
-	
-
-
+	git clone https://github.com/krishsenthil/Docker-UserService.git service
 	popd
 fi
 docker build -t user config/
