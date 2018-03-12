@@ -3,7 +3,7 @@
  * This is the bootstrap file for this application
  * which extends the base Noobh bootstrap. All _init{Methodname}
  * will be executed before application starts loading
- * @author Vijay
+ * @author SenthilrajK
  */
 class Bootstrap extends Noobh_Bootstrap{
   /**

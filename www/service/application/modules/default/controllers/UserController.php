@@ -3,7 +3,7 @@
  * User controller
  * 
  */
-class UserController extends Noobh_Controller
+class UserController
 {
 
     private $_errorStack;

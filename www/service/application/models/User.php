@@ -1,37 +1,4 @@
 <?php
-/**
- * Noobh Framework
- *
- * Collash Inc Internal
- *
- *
- * All user related function are specified in this
- * file
- *
- * @category   Models
- * @package    Models
- * @subpackage Models
- * @copyright  Copyright (c) Collash Inc
- * @version    0.1
- * @license    Collash Inc
- */
-/**
- *
- * Collash Inc Internal
- *
- * Model user class for performing user related activities.
- * Input parameters are validated and user information is
- * saved into the database. Function for updating user data,
- * deactivate and activate user are available.
- *
- * @author     Senthilraj Krish <senthilrajk@gmail.com>
- * @copyright  Collash Inc
- * @package    Models
- * @subpackage Models
- * @since      0.1
- * @date Oct 23, 2015
- *
- */
 
 /**
  * Models_User class

@@ -1,37 +1,6 @@
 <?php
-/**
- *
- * Collash Inc Internal
- *
- *
- * All user related function are specified in this
- * file
- *
- * @category   Controller
- * @package    Controller
- * @subpackage Controller
- * @copyright  Copyright (c) Collash Inc
- * @version    0.1
- * @license    Collash Inc
- */
-/**
- *
- * Collash Inc Internal
- *
- * Model user class for performing user related activities.
- * Input parameters are validated and user information is
- * saved into the database. Function for updating user data,
- * deactivate and activate user are available.
- *
- * @author     Senthilraj Krish <senthilrajk@gmail.com>
- * @copyright  Collash Inc
- * @package    Controller
- * @subpackage Controller
- * @since      0.1
- * @date Oct 23, 2015
- *
- */
-class IndexController extends Noobh_Controller
+
+class IndexController
 {
 
     /*

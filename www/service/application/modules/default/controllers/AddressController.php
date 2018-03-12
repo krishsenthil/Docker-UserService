@@ -3,7 +3,7 @@
  * User Address controller
  * 
  */
-class AddressController extends Noobh_Controller
+class AddressController
 {
 
     private $_errorStack;
@@ -86,18 +86,19 @@ class AddressController extends Noobh_Controller
                 $addressModel = new Models_Address();
                 $address = $addressModel->getAddressBy($userId,null);
                 if(!empty($address)) {       
-                $addressModel->setAddress1($address1);
-                $addressModel->setAddress2($address2);
-                $addressModel->setZipCode($zipCode);
-                $addressModel->setCountry($country);
-                $addressModel->setMobileNumber($mobileNumber);
-                $addressModel->setHomeNumber($homeNumber);
-                if (empty($this->_errorStack) {
-                    $addressModel->save();
-                    $response['status'] = 'OK';
-                    $response['error_code'] = 0;
-                } else {
-                    $response['errors'] = $this->_errorStack->getErrorList();
+                    $addressModel->setAddress1($address1);
+                    $addressModel->setAddress2($address2);
+                    $addressModel->setZipCode($zipCode);
+                    $addressModel->setCountry($country);
+                    $addressModel->setMobileNumber($mobileNumber);
+                    $addressModel->setHomeNumber($homeNumber);
+                    if (empty($this->_errorStack)) {
+                        $addressModel->save();
+                        $response['status'] = 'OK';
+                        $response['error_code'] = 0;
+                    } else {
+                        $response['errors'] = $this->_errorStack->getErrorList();
+                    }
                 }
             } else {
                 $response['error_code'] = '402';

@@ -1,36 +1,4 @@
 <?php
-/**
- * Noobh Framework
- *
- * Collash Inc Internal
- *
- *
- * All user address related function are specified in this
- * file
- *
- * @category   Models
- * @package    Models
- * @subpackage Models
- * @copyright  Copyright (c) Collash Inc
- * @version    0.1
- * @license    Collash Inc
- */
-/**
- *
- * Collash Inc Internal
- *
- * Model user address class for performing user address related
- * activities.Input parameters are validated and user address is
- * saved into the database.
- *
- * @author     Ashwini Pradeep <ashwinimnair@gmail.com>
- * @copyright  Collash Inc
- * @package    Models
- * @subpackage Models
- * @since      0.1
- * @date Oct 26, 2015
- *
- */
 
 /**
  * Models_Address class

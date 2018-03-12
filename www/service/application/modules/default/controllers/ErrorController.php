@@ -7,7 +7,7 @@
  * @author Senthilraj K
  *
  */
-class ErrorController extends Noobh_Controller
+class ErrorController
 {
     /**
      * This is the fall back action called by the

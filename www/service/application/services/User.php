@@ -1,35 +1,4 @@
 <?php
-/**
- * Noobh Framework
- *
- * Collash Inc Internal
- *
- *
- * All User and user address related service functions are specified
- * in this file
- *
- * @category   Services
- * @package    Services
- * @subpackage Services
- * @copyright  Copyright (c) Collash Inc
- * @version    0.1
- * @license    Collash Inc
- */
-/**
- *
- * Collash Inc Internal
- *
- * User Services class is for handling services on
- * creating, updating, activating and deactivating user information.
- *
- * @author     Ashwini Pradeep <ashwinimnair@gmail.com>
- * @copyright  Collash Inc
- * @package    Services
- * @subpackage Services
- * @since      0.1
- * @date Nov 2, 2015
- *
- */
 
 /**
  * User service class
