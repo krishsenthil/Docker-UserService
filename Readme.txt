@@ -26,29 +26,3 @@ $ docker exec -it service(name of the container) bash
 Once logged in to the machine, 
 1. Execute the mysql permissions file located @ /var/www/service/sql/9_grant_permissions.sql to create the mysql user for our application
 2. Import the mysql dump located @ /var/www/service/sql/1_ddl.sql to create the tables
-
-
-Available end points 
---------------------
-1. {BASE_URL}/default/index/get/  => get the user details by email
-	Params: 
-		email - user's email Id
-2. {BASE_URL}/default/index/create/ => create new user account
-	Params: 
-		email -  new user's email Id
-		password - new user's password
-		userName - new user's userName
-		firstName - new user's firstName
-		lastName - new user's lastName
-3. {BASE_URL}/default/index/update/ => update an existing user's account details
-	Params: 
-		email -  new user's email Id
-		password - new user's password (optional)
-		firstName - new user's firstName (optional)
-		lastName - new user's lastName (optional)
-4. {BASE_URL}/default/index/activate/  => Activate the newly created user by email
-	Params: 
-		email - user's email Id
-5. {BASE_URL}/default/index/delete/  => Delete an existing user account by email
-	Params: 
-		email - user's email Id
